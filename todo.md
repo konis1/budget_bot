@@ -2,13 +2,13 @@
 
 ## 1. Project Setup
 
-- [ ] **Create Project & Virtual Environment**
-  - [ ] Initialize a Python virtual environment.
-  - [ ] Install necessary libraries (e.g., `python-telegram-bot`, `pytest`).
+- [X] **Create Project & Virtual Environment**
+  - [X] Initialize a Python virtual environment.
+  - [X] Install necessary libraries (e.g., `python-telegram-bot`, `pytest`).
 
-- [ ] **Set Up Git**
-  - [ ] Create a new Git repository.
-  - [ ] Add a `.gitignore` to exclude unnecessary files (e.g., venv folders).
+- [X] **Set Up Git**
+  - [X] Create a new Git repository.
+  - [X] Add a `.gitignore` to exclude unnecessary files (e.g., venv folders).
 
 - [ ] **Basic "Hello World" Bot**
   - [ ] Create a minimal bot that responds to `/start` and `/help`.
