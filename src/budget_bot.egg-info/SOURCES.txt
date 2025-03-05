@@ -2,9 +2,11 @@ README.md
 pyproject.toml
 src/budget_bot/__init__.py
 src/budget_bot/bot.py
+src/budget_bot/firebase.py
 src/budget_bot.egg-info/PKG-INFO
 src/budget_bot.egg-info/SOURCES.txt
 src/budget_bot.egg-info/dependency_links.txt
 src/budget_bot.egg-info/requires.txt
 src/budget_bot.egg-info/top_level.txt
 tests/test_budget_bot.py
+tests/test_firebase.py

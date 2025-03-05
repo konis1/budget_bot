@@ -21,8 +21,8 @@
   - [X] Configure Firestore rules if needed.
 
 - [ ] **Integrate Firebase in Python**
-  - [ ] Install `firebase-admin`.
-  - [ ] Initialize Firebase with service account credentials.
+  - [X] Install `firebase-admin`.
+  - [X] Initialize Firebase with service account credentials.
   - [ ] Implement a test to read/write a sample document to Firestore.
 
 ## 3. Basic Expense Tracking
