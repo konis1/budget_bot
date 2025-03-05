@@ -5,11 +5,14 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "firebase-admin>=6.6.0",
+    "pytest>=8.3.5",
     "python-dotenv>=1.0.1",
     "python-telegram-bot>=21.11.1",
 ]
 
 [dependency-groups]
 dev = [
+    "pytest-asyncio>=0.25.3",
     "pytest>=8.3.5",
 ]

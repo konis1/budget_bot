@@ -11,14 +11,14 @@
   - [X] Add a `.gitignore` to exclude unnecessary files (e.g., venv folders).
 
 - [ ] **Basic "Hello World" Bot**
-  - [ ] Create a minimal bot that responds to `/start` and `/help`.
-  - [ ] Write and run minimal tests to confirm it works.
+  - [X] Create a minimal bot that responds to `/start` and `/help`.
+  - [X] Write and run minimal tests to confirm it works.
 
 ## 2. Firebase Connection
 
 - [ ] **Create Firebase Project**
-  - [ ] Generate service account credentials.
-  - [ ] Configure Firestore rules if needed.
+  - [X] Generate service account credentials.
+  - [X] Configure Firestore rules if needed.
 
 - [ ] **Integrate Firebase in Python**
   - [ ] Install `firebase-admin`.
