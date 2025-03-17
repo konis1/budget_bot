@@ -37,6 +37,30 @@ def initialize_firebase():
         raise
 
 
+def add_expense(user_id: int, amount: float, category: str, description: str = "", date: datetime = None):
+    """
+    Adds an expense record to Firestore
+    """
+    try:
+        db = initialize_firebase()
+
+        if not date:
+            date = datetime.now()
+
+        expense_data = {
+            "user_id": user_id,
+            "amount": amount,
+            "category": category,
+            "description": description,
+            "date": date,
+        }
+
+        expense_collection = db.collection("expenses")
+        expense_collection.add(expense_data)
+
+    except Exception as e:
+        return f"Firebase add_expense failed: {e}"
+
 def test_firestore_connection():
     """Test writing to and reading from Firestore."""
     try:

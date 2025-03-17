@@ -21,6 +21,11 @@ async def help(update: Update, context: ContextTypes.DEFAULT_TYPE):
     text_help = "add expenses using: /expense <amount> <category> [optional description]"
     await context.bot.send_message(chat_id=update.effective_chat.id, text=text_help)
 
+
+# async def expense(update: Update, context: ContextTypes.DEFAULT_TYPE):
+
+
+
 if __name__ == '__main__':
     application = ApplicationBuilder().token(token).build()
 
