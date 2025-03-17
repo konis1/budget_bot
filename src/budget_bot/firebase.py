@@ -7,18 +7,26 @@ from datetime import datetime
 from dotenv import load_dotenv
 
 
-
 def initialize_firebase():
     """Initialize Firebase with service account credentials."""
     try:
-        # Check if already initialized
+        # Check if Firebase is already initialized
         if not firebase_admin._apps:
             load_dotenv()
-            if os.getenv('GOOGLE_APPLICATION_CREDENTIALS'):
-                cred_dict = json.loads(os.getenv('GOOGLE_APPLICATION_CREDENTIALS'))
-                cred = credentials.Certificate(cred_dict)
+
+            env_value = os.getenv('GOOGLE_APPLICATION_CREDENTIALS')
+
+            if not env_value:
+                raise ValueError("GOOGLE_APPLICATION_CREDENTIALS is not set or is empty.")
+
+            # If it's a file path, read from the file
+            if os.path.exists(env_value):
+                with open(env_value, 'r') as f:
+                    cred_dict = json.load(f)
             else:
-                raise ValueError("Firebase credentials not found. Please provide either a firebase-credentials.json file or set the FIREBASE_CREDENTIALS environment variable.")
+                raise ValueError(f"Firebase credentials file not found at: {env_value}")
+
+            cred = credentials.Certificate(cred_dict)
             firebase_admin.initialize_app(cred)
 
         # Return Firestore client
